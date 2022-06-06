@@ -1,0 +1,52 @@
+<%= form_with(model: recipe) do |form| %>
+  <% if recipe.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
+
+      <ul>
+        <% recipe.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :recipe_name, style: "display: block" %>
+    <%= form.text_field :recipe_name %>
+  </div>
+
+  <div>
+    <%= form.label :image, style: "display: block" %>
+    <%= form.text_field :image %>
+  </div>
+
+  <div>
+    <%= form.label :cooking_time, style: "display: block" %>
+    <%= form.number_field :cooking_time %>
+  </div>
+
+  <div>
+    <%= form.label :desc, style: "display: block" %>
+    <%= form.text_area :desc %>
+  </div>
+
+  <div>
+    <%= form.label :ingredient_qty, style: "display: block" %>
+    <%= form.number_field :ingredient_qty %>
+  </div>
+
+  <div>
+    <%= form.label :instructions, style: "display: block" %>
+    <%= form.text_field :instructions %>
+  </div>
+
+  <div>
+    <%= form.label :servings, style: "display: block" %>
+    <%= form.number_field :servings %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
