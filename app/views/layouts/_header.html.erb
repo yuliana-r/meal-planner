@@ -8,13 +8,20 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+          <%= link_to "Home", recipes_path, class:"nav-link text-light" %>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="#">Sign Up</a>
+          <%= link_to "Sign up", new_user_registration_path, class:"nav-link text-light" %>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="#">Log in</a>
+          <%= link_to "Log in", new_user_session_path, class:"nav-link text-light" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Edit profile", edit_user_registration_path, method: :delete,
+           class:"nav-link text-light" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Sign out", destroy_user_session_path, class:"nav-link text-light"%>
         </li>
       </ul>
     </div>
