@@ -13,6 +13,7 @@ class RecipesController < ApplicationController
   # GET /recipes/new
   def new
     @recipe = Recipe.new
+    #@recipe.category_id = 1
   end
 
   # GET /recipes/1/edit
@@ -22,6 +23,7 @@ class RecipesController < ApplicationController
   # POST /recipes or /recipes.json
   def create
     @recipe = Recipe.new(recipe_params)
+    #@recipe.category_id = 1
 
     respond_to do |format|
       if @recipe.save

@@ -41,9 +41,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_12_203616) do
     t.integer "servings"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "ingredient_id"
-    t.integer "unit_id"
-    t.integer "category_id"
+    #t.integer "ingredient_id"
+    #t.integer "unit_id"
+    #t.integer "category_id"
   end
 
   create_table "units", force: :cascade do |t|

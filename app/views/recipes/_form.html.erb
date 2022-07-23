@@ -14,12 +14,16 @@
     <%= form.text_field :recipe_name %>
   </div>
   <div>
+    <%= form.label :image, style: "display: block" %>
+    <%= form.text_field :image %>
+  </div>
+   <div>
     <%= form.label :category_id, style: "display: block" %>
     <%= form.text_field :category_id %>
   </div>
   <div>
-    <%= form.label :image, style: "display: block" %>
-    <%= form.text_field :image %>
+    <%= form.label :servings, style: "display: block" %>
+    <%= form.number_field :servings %>
   </div>
   <div>
     <%= form.label :cooking_time, style: "display: block" %>
@@ -34,20 +38,8 @@
     <%= form.number_field :ingredient_qty %>
   </div>
   <div>
-    <%= form.label :unit_id, style: "display: block" %>
-    <%= form.text_field :unit_id %>
-  </div>
-  <div>
-    <%= form.label :ingredient_id, style: "display: block" %>
-    <%= form.text_field :ingredient_id %>
-  </div>
-  <div>
     <%= form.label :instructions, style: "display: block" %>
     <%= form.text_field :instructions %>
-  </div>
-  <div>
-    <%= form.label :servings, style: "display: block" %>
-    <%= form.number_field :servings %>
   </div>
   <div>
     <%= form.submit %>
