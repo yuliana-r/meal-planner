@@ -3,10 +3,6 @@ Rails.application.routes.draw do
   resources :recipes
 
   root 'recipes#index'
-  #do
-    #get '/users/sign_out' => 'devise/sessions#destroy'
-    #get '/users/sign_up' => 'devise/registrations#new'
-  #end
   resources :mealplans
   resources :recipes
   resources :ingredients

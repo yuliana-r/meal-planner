@@ -13,10 +13,6 @@
     <%= form.label :recipe_name, style: "display: block" %>
     <%= form.text_field :recipe_name %>
   </div>
-  <div>
-    <%= form.label :image, style: "display: block" %>
-    <%= form.text_field :image %>
-  </div>
    <div>
     <%= form.label :category_id, style: "display: block" %>
     <%= form.text_field :category_id %>
@@ -40,6 +36,10 @@
   <div>
     <%= form.label :instructions, style: "display: block" %>
     <%= form.text_field :instructions %>
+  </div>
+  <div>
+    <%= form.label :image, style: "display: block" %> 
+    <%= form.file_field :image, accept: 'image/png, image/jpg, image/jpeg' %>
   </div>
   <div>
     <%= form.submit %>
