@@ -13,7 +13,7 @@ class RecipesController < ApplicationController
   # GET /recipes/new
   def new
     @recipe = Recipe.new
-    @recipe.category_id = 1
+    #@recipe.category_id = 1
   end
 
   # GET /recipes/1/edit
