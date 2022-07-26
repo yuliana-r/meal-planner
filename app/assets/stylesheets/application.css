@@ -39,6 +39,10 @@ nav {
     margin-top: 2em;
 }
 
+.col-sm {
+    margin-right: 0;
+}
+
 .card-img-top {
     width: 100%;
     height: 270px;
