@@ -17,6 +17,7 @@
 
 body {
     background-color: #dcd2cd;
+    padding-bottom: 1em;
 }
 
 nav {
@@ -35,9 +36,11 @@ nav {
     width: 6em !important;
 }
 
+
 .form-group {
     width: 50%;
 }
+
 .card {
     margin-top: 2em;
 }
