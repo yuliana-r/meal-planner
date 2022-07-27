@@ -1,37 +1,39 @@
-<div id="<%= dom_id recipe %>">
-  <p>
-    <strong>Recipe name:</strong>
-    <%= recipe.recipe_name %>
-  </p>
 
-  <p>
-    <strong>Image:</strong>
-   <img src="<%= (url_for(recipe.image)) %>">
-  </p>
-
-  <p>
-    <strong>Cooking time:</strong>
-    <%= recipe.cooking_time %>
-  </p>
-
-  <p>
-    <strong>Desc:</strong>
-    <%= recipe.desc %>
-  </p>
-
-  <p>
-    <strong>Ingredient qty:</strong>
-    <%= recipe.ingredient_qty %>
-  </p>
-
-  <p>
-    <strong>Instructions:</strong>
-    <%= recipe.instructions %>
-  </p>
-
-  <p>
-    <strong>Servings:</strong>
-    <%= recipe.servings %>
-  </p>
-
-</div>
+<div class="card align-self-center" style="width: 18rem;">
+  <div class="card-header">
+    <%= recipe.category.category_name %>
+  </div>
+  <img class="card-img-top" src="<%= (url_for(recipe.image)) %>" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title"><%= recipe.recipe_name %></h5>
+    <p>
+      <em>Cooking time (minutes):</em>
+      <%= recipe.cooking_time %>
+    </p>
+    <p>
+      <em>Servings:</em>
+      <%= recipe.servings %>
+    </p>
+    <p class="card-text"><%= recipe.desc %></p>
+    <% if user_signed_in? %>
+      <% if current_user.id == 1%>
+        <div class="btn-toolbar d-flex justify-content-center mt-auto align-self-start" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group mx-2" role="group" aria-label="First group">
+            <%= link_to "Edit", edit_recipe_path(recipe), class: 'btn btn-primary custom' %>
+          </div>
+          <div class="btn-group mx-2" role="group" aria-label="Second group">
+            <%= button_to "Delete", recipe, method: :delete, class: 'btn btn-danger custom' %>
+          </div>
+        </div>
+      <% else %>
+        <div class="btn-toolbar d-flex justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group mx-2" role="group" aria-label="First group">
+            <%# <%= link_to "Add to mealplan", edit_recipe_path(recipe), class: 'btn btn-primary custom' %>
+            <button type="button" class="btn btn-primary">Add</button>
+          </div>
+          <div class="btn-group mx-2" role="group" aria-label="Second group">
+            <%= link_to "Method", recipe.instructions, target: :_blank, class: 'btn btn-primary custom' %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>

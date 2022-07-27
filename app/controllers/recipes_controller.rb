@@ -13,7 +13,6 @@ class RecipesController < ApplicationController
   # GET /recipes/new
   def new
     @recipe = Recipe.new
-    @recipe.category_id = 1
   end
 
   # GET /recipes/1/edit
@@ -23,7 +22,6 @@ class RecipesController < ApplicationController
   # POST /recipes or /recipes.json
   def create
     @recipe = Recipe.new(recipe_params)
-    @recipe.category_id = 1
 
     respond_to do |format|
       if @recipe.save
@@ -67,6 +65,6 @@ class RecipesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def recipe_params
-      params.require(:recipe).permit(:recipe_name, :image, :cooking_time, :desc, :ingredient_qty, :instructions, :servings, :image)
+      params.require(:recipe).permit(:recipe_name, :image, :category_id, :cooking_time, :desc, :ingredient_qty, :instructions, :servings, :image)
     end
 end
