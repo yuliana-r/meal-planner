@@ -2,8 +2,8 @@
 <div class="container">
 
 <%= form_tag recipes_path do |f| %>
-   <%= select_tag('category_id', options_from_collection_for_select(Category.all, 'category_name', 'category_name')) %>
-   <%= submit_tag "Filter by category" %>
+   <%= select_tag('category_id', options_from_collection_for_select(Category.all, 'category_name', 'category_name'))%>
+   <%= submit_tag "Filter by category", class: "btn btn-secondary btn-sm" %>
 <% end %>
 
   <div class="row d-flex">
