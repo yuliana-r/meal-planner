@@ -1,24 +1,5 @@
-# README
+# Vegan Meal Planner (prototype)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Introduction
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This project is a vegan meal planner prototype/MVP delivered alongside my final university dissertation, submitted in partial fulfilment of the requirements of Roehampton University for the degree of Bachelor of Science in Computing Technologies. The dissertation received 71 marks out of 100. 
